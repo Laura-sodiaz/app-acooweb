@@ -1,0 +1,56 @@
+<mat-toolbar class="custom-toolbar" >
+  <button mat-icon-button (click)="sidenav.toggle()" matTooltip="Menu">
+      <mat-icon>menu</mat-icon>
+  </button>
+  <span>AcooWeb</span>
+  <span class="toolbar-item-spacer"></span>
+  <button mat-icon-button matTooltip="My Account" [matMenuTriggerFor]="userAccountMenu">
+      <mat-icon>account_circle</mat-icon>
+  </button>
+  <span>Hola, Lau</span>
+  <mat-menu #userAccountMenu [overlapTrigger]="false" yPosition="below">
+      <button mat-menu-item  disabled routerLink="#">
+          <mat-icon>person</mat-icon><span>Mi perfil</span>
+      </button>
+      <button mat-menu-item disabled routerLink="#">
+          <mat-icon>help</mat-icon><span>Ayuda</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item routerLink="/inicio">
+          <mat-icon>exit_to_app</mat-icon>Cerrar sesión
+      </button>
+  </mat-menu>
+</mat-toolbar>
+
+<mat-sidenav-container class="app-container">
+  <mat-sidenav #sidenav mode="push" class="sidenavstyle">
+      <mat-nav-list>    
+        <mat-list-item routerLink="#">
+          <span>Dashboard </span>
+       </mat-list-item>
+       <mat-divider></mat-divider>
+       
+        <a routerLink="/search" 
+        mat-list-item 
+        (click)="sidenav.toggle()">
+         <span>Inicio</span>
+        </a>
+
+      </mat-nav-list>
+  </mat-sidenav>
+
+
+<div class="container">
+
+  <div class="content">
+    <!-- Contenido de la página -->
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+ <div class="footer" #footer>
+  <br>
+  Copyright © 2023, AcooWeb! All Rights Reserved.
+  </div>
+
+</mat-sidenav-container>

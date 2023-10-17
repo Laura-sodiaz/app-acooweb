@@ -1,0 +1,19 @@
+.card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .small-card {
+    width: 150px;
+  }
+  
+  @media (max-width: 600px) {
+    .card-grid {
+      flex-wrap: wrap;
+    }
+  }
+  
+  .selected-card {
+    border: 1px solid #e91e63; /* Style for the selected card */
+  }

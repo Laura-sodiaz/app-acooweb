@@ -1,0 +1,57 @@
+
+
+<!-- <div class="body">
+    <div class="login">
+        <form [formGroup]="form" (ngSubmit)="ingresar()">
+            <img src="./assets/img/facial.png" width="50%">
+            <h1>Inicio de Sesión</h1>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <input matInput autocomplete="off" formControlName="usuario">
+            </mat-form-field>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="password" autocomplete="off" formControlName="password">
+            </mat-form-field>
+            <br>
+            <button mat-raised-button type="submit" [disabled]="form.invalid" class="button" color="primary">INGRESAR</button>
+        </form>
+    </div>
+</div> -->
+
+<div class="body">
+    <div class="login-container">
+        <div class="login-info-container">
+            <h1 class="title">Inicio de Sesión</h1>
+            <div class="social-login">
+                <div class="social-login-element">
+                    <img src="assets/img/gmail.svg" alt="google-image">
+                    <span>Google</span>
+                </div>
+                <div class="social-login-element">
+                    <img src="assets/img/facebook.svg" alt="facebook-image">
+                    <span>Facebook</span>
+                </div>
+            </div>
+            <p>o</p>
+            <form class="imputs-container" [formGroup]="form" (ngSubmit)="ingresar()">
+                <input type="text" ngClass="input" placeholder="Usuario">
+                <input type="password" ngClass="input" placeholder="Contraseña">
+                <P>Recuparar contraseña? <span class="span">Click aquí</span></P>
+                
+                <button class="button">Ingresar</button>
+
+                <p>No tienes cuenta? <span class="span">Registrar</span></p>
+            </form>
+        </div>
+        <img  class="image-container" src="assets/img/login.svg" alt="login">
+    </div>
+</div>
+
+
+<ngx-spinner
+  bdColor="rgba(0,0,0,0.8)"
+  size="large"
+  color="#e91e63"
+  type="ball-scale-multiple">
+</ngx-spinner>
