@@ -18,22 +18,22 @@ export class SearchComponent {
 
   cards = [
     {
-      title: 'Categoria 1',
-      imageUrl: 'https://via.placeholder.com/150',
+      title: 'Lectoescritura y escucha ',
+      imageUrl: 'https://ccfprosario.com.ar/wp-content/uploads/10-divertidas-actividades-de-lectoescritura-para-primer-grado.jpg',
       description: 'Description for Card 1'
     },
     {
-      title: 'Categoria 2',
-      imageUrl: 'https://via.placeholder.com/150',
+      title: 'Percepción de imagen ',
+      imageUrl: 'https://uploads-ssl.webflow.com/62492b6e92323519d2c3061f/62b363e7bf08505b641ace9f_IMG-20211012-WA0034.jpg',
       description: 'Description for Card 2'
     },
     {
-      title: 'Categoria 3',
+      title: 'Razonamiento lógico ',
       imageUrl: 'https://via.placeholder.com/150',
       description: 'Description for Card 3'
     },
     {
-      title: 'Categoria 4',
+      title: 'Memoria ',
       imageUrl: 'https://via.placeholder.com/150',
       description: 'Description for Card 4'
     }

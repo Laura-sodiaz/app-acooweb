@@ -1,13 +1,16 @@
-<mat-toolbar class="custom-toolbar" >
+<mat-toolbar >
   <button mat-icon-button (click)="sidenav.toggle()" matTooltip="Menu">
       <mat-icon>menu</mat-icon>
   </button>
-  <span>AcooWeb</span>
+
+    <img src="./assets/img/logo5.png/"  alt="Logo" class="logo-image">
+  <!-- <span>Acooweb</span> -->
+ 
   <span class="toolbar-item-spacer"></span>
   <button mat-icon-button matTooltip="My Account" [matMenuTriggerFor]="userAccountMenu">
       <mat-icon>account_circle</mat-icon>
   </button>
-  <span>Hola, Lau</span>
+  <span>Hola, {{user}}</span>
   <mat-menu #userAccountMenu [overlapTrigger]="false" yPosition="below">
       <button mat-menu-item  disabled routerLink="#">
           <mat-icon>person</mat-icon><span>Mi perfil</span>
@@ -22,35 +25,53 @@
   </mat-menu>
 </mat-toolbar>
 
+
 <mat-sidenav-container class="app-container">
   <mat-sidenav #sidenav mode="push" class="sidenavstyle">
       <mat-nav-list>    
         <mat-list-item routerLink="#">
-          <span>Dashboard </span>
+          <span>Dashboard | menu</span>
        </mat-list-item>
        <mat-divider></mat-divider>
        
-        <a routerLink="/search" 
+        <a routerLink="./list" 
         mat-list-item 
         (click)="sidenav.toggle()">
          <span>Inicio</span>
         </a>
+        
+        <a  routerLink="./add"
+           mat-list-item 
+           (click)="sidenav.toggle()">
+            <span>Lectoescritura</span>
+        </a>
 
+        <a 
+           mat-list-item 
+           (click)="sidenav.toggle()">
+           <span>Percepción</span>
+        </a>
+
+        <a 
+        mat-list-item 
+        (click)="sidenav.toggle()">
+        <span>Razonamiento</span>
+       </a>
+
+       <a 
+        mat-list-item 
+        (click)="sidenav.toggle()">
+        <span>Memoria</span>
+       </a>
+        
       </mat-nav-list>
   </mat-sidenav>
-
-
-<div class="container">
-
-  <div class="content">
-    <!-- Contenido de la página -->
+  <div class="container">
     <router-outlet></router-outlet>
-  </div>
 </div>
 
- <div class="footer" #footer>
-  <br>
-  Copyright © 2023, AcooWeb! All Rights Reserved.
+<div class="footer" #footer>
+  Copyright © 2023, Acooweb! Todos los derechos reservados.
   </div>
 
 </mat-sidenav-container>

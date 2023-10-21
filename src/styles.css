@@ -1,11 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --color-1: #1DB954;
+    --color-1: #1976D2;
     --color-2: #323232;
     --color-3: #000000;
     --color-4: #FFFFFF;
-    --color-5: #f0e3e3;
+    --color-5: #1976D2;
+    --color-6: #BBDEFB;
+    --color-7: #2196F3;
+    --color-8: #03A9F4;
     --font-size-1: 1rem;
     --font-size-2: 1.2rem;
     --font-size-3: 1.8rem;
@@ -15,6 +18,13 @@
     --border-radius-2: .5rem;
     --font-family-1: 'Poppins', sans-serif;
     --animation-1: 200ms;
+
+    --login-bg: #f8f3ff;
+    --title-bg: #9089cc;
+    --button-bg: #674baf;
+    --ligth-pink: #e882e8;
+    --image-bg: #eadbff;
+
 }
 
 html, body { height: 100%; }

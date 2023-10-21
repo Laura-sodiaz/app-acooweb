@@ -1,18 +1,11 @@
 
-:root{
-    --login-bg: #f8f3ff;
-    --title-bg: #9089cc;
-    --button-bg: #674baf;
-    --ligth-pink: #e882e8;
-    --image-bg: #eadbff;
-}
 
 .body{
     display: flex;
     justify-content: center;
     height: 100%;
     align-items: center;
-    /*background-image: linear-gradient(to top, #e6e9f0 50%, #eef1f5 100%);*/
+    background-image: linear-gradient(to top, #e6e9f0 0%, var(--color-2) 100%);
 }
 
 .login-container{
@@ -34,13 +27,13 @@
     align-items: center;
     text-align: center;
     padding-top: 5rem;
-    background-color: #03A9F4;
+    background-color: #f0f0f0;
 }
 
 .image-container{
     width: 50%;
     padding: 2rem;
-    background-color: #1976D2;
+    background-color: #757575;
 }
 
 
@@ -48,7 +41,7 @@
     font-size: 2.25rem;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #BBDEFB;
+    color: var(--color-5);
     
 }
 
@@ -63,12 +56,12 @@
     height: 3.75rem;
     font-size: 1.2rem;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.1px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    border: 1px solid #BBDEFB;
+    border: 1px solid var(--color-2);
 }
 
 .social-login-element img{
@@ -126,23 +119,22 @@
     color: #000;
     border-radius: 5px;
     cursor: pointer;
-    background-color:#000;
+    background-color: var(--color-5);
     color: #fff;
-    border: 1px solid #1976D2;
 
 }
 
 .button:hover{
-    background-color: #ffd740;
-    color: #000;
-    border: 1px solid #ffd740;
+    background-color: var(--color-8);
+    color: #fff;
+    border: 1px solid var(--color-5);
 }
 
 .inputs-container p{
     margin: 0;
 }
 .span{
-    color: #BBDEFB;
+    color: var(--color-7);
     font-weight: 600;
     cursor: pointer;
 }

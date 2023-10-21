@@ -35,11 +35,12 @@
             </div>
             <p>o</p>
             <form class="imputs-container" [formGroup]="form" (ngSubmit)="ingresar()">
-                <input type="text" ngClass="input" placeholder="Usuario">
-                <input type="password" ngClass="input" placeholder="Contraseña">
+                <input type="text" ngClass="input" formControlName="usuario" placeholder="Usuario">
+                <input type="password" ngClass="input" formControlName="password" placeholder="Contraseña">
                 <P>Recuparar contraseña? <span class="span">Click aquí</span></P>
                 
-                <button class="button">Ingresar</button>
+                <!-- <button type="submit" [disabled]="form.invalid" class="button">Ingresar</button> -->
+                <button mat-raised-button type="submit" [disabled]="form.invalid" class="button" color="accent">INGRESAR</button>
 
                 <p>No tienes cuenta? <span class="span">Registrar</span></p>
             </form>
@@ -52,6 +53,6 @@
 <ngx-spinner
   bdColor="rgba(0,0,0,0.8)"
   size="large"
-  color="#e91e63"
+  color="#03A9F4"
   type="ball-scale-multiple">
 </ngx-spinner>

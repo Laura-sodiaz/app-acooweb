@@ -31,11 +31,35 @@ form: FormGroup;
     setTimeout(() => {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
+      const user = (this.form.value.usuario).toUpperCase();
+      const pass = (this.form.value.password).toUpperCase( );
+
+      if(pass==='ACOOWEB'){
+        console.log('Contraseña Correcta')
+
+        if(user==="LAURA"){
+           console.log('Acceso correcto:','LAURA');
+           sessionStorage.setItem('user', user);
+        }else if(user==="LILIANA"){
+           console.log('Acceso correcto:','LILIANA');
+           sessionStorage.setItem('user', user);
+        }else if(user==="ESTEBAN"){
+           console.log('Acceso correcto:','ESTEBAN');
+           sessionStorage.setItem('user', user);
+        }else if(user==="ELENA"){
+           console.log('Acceso correcto:','ELENA');
+           sessionStorage.setItem('user', user);
+        }else{
+          console.log('Usuario Incorrecto')
+        }
+
+      }else{
+        console.log('Contraseña inválida')
+      }
+
       this.router.navigateByUrl('search');
     }, 1000);
 
-    console.log(this.form.value);
-   
   }
 
 }

@@ -1,48 +1,31 @@
 .toolbar-item-spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .app-container {
-    height: 90%;
-    margin: 0;
+  height: 91.5%;
+  margin: 0;
 } 
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 7%;
-    background-color: #0d6efd;
-    color: #fff;
-    text-align: center;
-    margin: 0px;
-    }
-
+  
 .mat-toolbar{
-    background: var(--color-4);
+  background-image: linear-gradient(to top, #e6e9f0 0%, var(--color-5) 2%);
+  color: #fff;
 }
 
-.custom-toolbar {
-    display: flex;
-    justify-content: center;
-    width: 80%; /* Porcentaje o tamaño deseado */
-    margin: 0 auto; /* Centrar en la página */
-  }
-  
-  .custom-toolbar span {
-    text-align: center; /* Alinear el contenido al centro dentro del toolbar */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2%;
+  background-color: #03A9F4;
+  color:  #fff;
+  text-align: center;
+  margin: 0px;
   }
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
-    padding: 20px;
-  }
-  
-  .content {
-    width: 100%;
-    max-width: 95%; /* Ancho máximo del contenido */
+  .logo-image {
+    height: 70px; /* Ajusta la altura deseada */
+    width: auto; /* Ajusta el ancho automático para mantener la proporción */
+    margin-right: 20px; /* Espacio a la derecha de la imagen */
+    margin-top: 12px;
   }
