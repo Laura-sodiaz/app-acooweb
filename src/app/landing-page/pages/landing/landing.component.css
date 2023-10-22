@@ -18,4 +18,11 @@
     font-size: 1.2em;
     margin-bottom: 40px;
   }
+
+  .logo-image {
+    height: 100px; /* Ajusta la altura deseada */
+    width: auto; /* Ajusta el ancho automático para mantener la proporción */
+    margin-right: 20px; /* Espacio a la derecha de la imagen */
+    margin-top: 5px;
+  }
   
