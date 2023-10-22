@@ -1,77 +1,75 @@
-<mat-toolbar >
+<mat-toolbar>
   <button mat-icon-button (click)="sidenav.toggle()" matTooltip="Menu">
-      <mat-icon>menu</mat-icon>
+    <mat-icon>menu</mat-icon>
   </button>
 
-    <img src="./assets/img/logo5.png/"  alt="Logo" class="logo-image">
+  <img src="./assets/img/icono6.png/" alt="Logo" class="logo-image">
   <!-- <span>Acooweb</span> -->
- 
+
   <span class="toolbar-item-spacer"></span>
   <button mat-icon-button matTooltip="My Account" [matMenuTriggerFor]="userAccountMenu">
-      <mat-icon>account_circle</mat-icon>
+    <mat-icon>account_circle</mat-icon>
   </button>
-  <span>Hola, {{user}}</span>
+  <span>Hola, {{user | titlecase}}</span>
   <mat-menu #userAccountMenu [overlapTrigger]="false" yPosition="below">
-      <button mat-menu-item  disabled routerLink="#">
-          <mat-icon>person</mat-icon><span>Mi perfil</span>
-      </button>
-      <button mat-menu-item disabled routerLink="#">
-          <mat-icon>help</mat-icon><span>Ayuda</span>
-      </button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item routerLink="/inicio">
-          <mat-icon>exit_to_app</mat-icon>Cerrar sesión
-      </button>
+    <button mat-menu-item disabled routerLink="#">
+      <mat-icon>person</mat-icon><span>Mi perfil</span>
+    </button>
+    <button mat-menu-item disabled routerLink="#">
+      <mat-icon>help</mat-icon><span>Ayuda</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item routerLink="/auth">
+      <mat-icon>exit_to_app</mat-icon>Cerrar sesión
+    </button>
   </mat-menu>
 </mat-toolbar>
 
 
 <mat-sidenav-container class="app-container">
   <mat-sidenav #sidenav mode="push" class="sidenavstyle">
-      <mat-nav-list>    
-        <mat-list-item routerLink="#">
-          <span>Dashboard | menu</span>
-       </mat-list-item>
-       <mat-divider></mat-divider>
-       
-        <a routerLink="./list" 
-        mat-list-item 
-        (click)="sidenav.toggle()">
-         <span>Inicio</span>
-        </a>
-        
-        <a  routerLink="./add"
-           mat-list-item 
-           (click)="sidenav.toggle()">
-            <span>Lectoescritura</span>
-        </a>
+    <mat-nav-list>
+      <mat-list-item routerLink="#">
+        <span>Dashboard | menu</span>
+      </mat-list-item>
+      <mat-divider></mat-divider>
 
-        <a 
-           mat-list-item 
-           (click)="sidenav.toggle()">
-           <span>Percepción</span>
+      <a routerLink="/search" mat-list-item (click)="sidenav.toggle()">
+        <span>Volver al Inicio</span>
+      </a>
+
+      <!-- <div (click)="goToDetail(0)">
+        <a routerLink="./add" mat-list-item (click)="sidenav.toggle()">
+          <span>Lectoescritura</span>
         </a>
+      </div>
 
-        <a 
-        mat-list-item 
-        (click)="sidenav.toggle()">
-        <span>Razonamiento</span>
-       </a>
+      <div (click)="goToDetail(1)">
+        <a mat-list-item (click)="sidenav.toggle()">
+          <span>Percepción</span>
+        </a>
+      </div>
 
-       <a 
-        mat-list-item 
-        (click)="sidenav.toggle()">
-        <span>Memoria</span>
-       </a>
-        
-      </mat-nav-list>
+      <div (click)="goToDetail(2)">
+        <a mat-list-item (click)="sidenav.toggle()">
+          <span>Razonamiento</span>
+        </a>
+      </div>
+
+      <div (click)="goToDetail(3)">
+        <a mat-list-item (click)="sidenav.toggle()">
+          <span>Memoria</span>
+        </a>
+      </div> -->
+
+    </mat-nav-list>
   </mat-sidenav>
   <div class="container">
     <router-outlet></router-outlet>
-</div>
+  </div>
 
-<div class="footer" #footer>
-  Copyright © 2023, Acooweb! Todos los derechos reservados.
+  <div class="footer" #footer>
+    Copyright © 2023, Acooweb! Todos los derechos reservados.
   </div>
 
 </mat-sidenav-container>

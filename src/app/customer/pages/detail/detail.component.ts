@@ -1,12 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatAccordion } from '@angular/material/expansion';
-
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-}
+import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-detail',
@@ -14,13 +8,27 @@ export interface Tile {
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent {
+  public option : any;
 
-  @ViewChild(MatAccordion)
-  accordion!: MatAccordion;
+  constructor(
+    private router: Router,
+    private spinner: NgxSpinnerService){
+  
+  }
+   
+  public categoria : any;
 
-  tiles: Tile[] = [
-    {text: 'One', cols: 1, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 3, rows: 4, color: 'lightgreen'},
-  ];
+  ngOnInit(){
+    this.categoria = sessionStorage.getItem('catDesc');
+    this.option = sessionStorage.getItem('catNum');
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    },2500)
+  }
+
+  return(){
+    this.router.navigateByUrl('search');
+  }
 
 }

@@ -24,8 +24,8 @@
   }
 
   .logo-image {
-    height: 70px; /* Ajusta la altura deseada */
+    height: 50px; /* Ajusta la altura deseada */
     width: auto; /* Ajusta el ancho automático para mantener la proporción */
     margin-right: 20px; /* Espacio a la derecha de la imagen */
-    margin-top: 12px;
+    margin-top: 5px;
   }

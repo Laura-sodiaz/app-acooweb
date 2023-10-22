@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login',
@@ -34,30 +35,87 @@ form: FormGroup;
       const user = (this.form.value.usuario).toUpperCase();
       const pass = (this.form.value.password).toUpperCase( );
 
-      if(pass==='ACOOWEB'){
+      if(pass==='ACOOWEB' || pass==='123'){
         console.log('Contraseña Correcta')
 
         if(user==="LAURA"){
            console.log('Acceso correcto:','LAURA');
            sessionStorage.setItem('user', user);
+           Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Acceso correcto a Acooweb',
+            showConfirmButton: false,
+            timer: 1500
+          })
+           this.router.navigateByUrl('search');
+
         }else if(user==="LILIANA"){
            console.log('Acceso correcto:','LILIANA');
            sessionStorage.setItem('user', user);
+           Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Acceso correcto a Acooweb',
+            showConfirmButton: false,
+            timer: 1500
+          })
+           this.router.navigateByUrl('search');
+
         }else if(user==="ESTEBAN"){
            console.log('Acceso correcto:','ESTEBAN');
            sessionStorage.setItem('user', user);
+           Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Acceso correcto a Acooweb',
+            showConfirmButton: false,
+            timer: 1500
+          })
+           this.router.navigateByUrl('search');
+
         }else if(user==="ELENA"){
            console.log('Acceso correcto:','ELENA');
            sessionStorage.setItem('user', user);
-        }else{
+           Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Acceso correcto a Acooweb',
+            showConfirmButton: false,
+            timer: 1500
+          })
+           this.router.navigateByUrl('search');
+
+        }else if(user==="PIPE"){
+          console.log('Acceso correcto:','ELENA');
+          sessionStorage.setItem('user', user);
+          Swal.fire({
+           position: 'top-end',
+           icon: 'success',
+           title: 'Acceso correcto a Acooweb',
+           showConfirmButton: false,
+           timer: 1500
+         })
+          this.router.navigateByUrl('search');
+
+       }else{
           console.log('Usuario Incorrecto')
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Usuario Incorrecto!'
+          })
         }
 
       }else{
         console.log('Contraseña inválida')
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Contraseña inválida!'
+        })
       }
 
-      this.router.navigateByUrl('search');
     }, 1000);
 
   }

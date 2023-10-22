@@ -1,6 +1,41 @@
-<br>
-<h1>Categoria #</h1>
+<br><br>
+<h1>{{categoria}}</h1>
 <mat-divider></mat-divider>
 <br>
+<div class="card-grid">
 
-<iframe style="max-width:100%" src="https://wordwall.net/es/embed/d6afed0fc9eb40889493e81583b07d83?themeId=1&templateId=3&fontStackId=0" width="90%" height="460" frameborder="0" allowfullscreen></iframe>
+    <!--cat 1-->
+    <iframe *ngIf="option==='0'" style="max-width:100%"
+        src="https://wordwall.net/es/embed/d6afed0fc9eb40889493e81583b07d83?themeId=1&templateId=3&fontStackId=0"
+        width="90%" height="460" frameborder="0" allowfullscreen></iframe>
+
+
+    <!--cat 2-->
+    <iframe *ngIf="option==='1'" src="https://learningapps.org/watch?v=pmcfcngsc23"
+        style="border:0px;width:90%;height:460px" allowfullscreen="true" webkitallowfullscreen="true"
+        mozallowfullscreen="true"></iframe>
+
+
+    <!--cat 3-->
+    <iframe *ngIf="option==='2'" style="max-width:100%"
+        src="https://wordwall.net/es/embed/ab28cf4cf46845bda1574bf450969a1f?themeId=1&templateId=3&fontStackId=0"
+        width="90%" height="460" frameborder="0" allowfullscreen></iframe>
+
+
+    <!--cat 4-->
+    <iframe *ngIf="option==='3'" style="max-width:100%"
+        src="https://wordwall.net/es/embed/f179a799c3394dd792790d12cc2cf4cf?themeId=2&templateId=25&fontStackId=0"
+        width="90%" height="460" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<a (click)="return()" class="btn-flotante">Menu</a>
+
+
+<ngx-spinner
+  bdColor="rgba(0,0,0,0.8)"
+  size="large"
+  color="#03A9F4"
+  type="ball-scale-multiple">
+</ngx-spinner>
+
+
